@@ -14,9 +14,8 @@ Gem::Specification.new do |spec|
   spec.homepage      = "http://github.com/sunny/freelabster"
   spec.license       = "MIT"
 
-  spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(spec)/}) }
-  spec.bindir        = "exe"
-  spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
+  spec.files         = `git ls-files -z`.split("\x0")
+                                        .reject { |f| f.match(%r{^(spec)/}) }
   spec.require_paths = ["lib"]
 
   spec.add_dependency "http", "2.0.0"
@@ -25,4 +24,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec", "~> 3.0"
   spec.add_development_dependency "webmock", "~> 2.1"
+  spec.add_development_dependency "rubocop", "~> 0.42"
 end

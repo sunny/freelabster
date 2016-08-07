@@ -1,4 +1,5 @@
 module Freelabster
+  # Handles all calls to Freelabster's API.
   class API
     # Get a new token from the API.
     #

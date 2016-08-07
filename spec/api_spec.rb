@@ -12,8 +12,10 @@ module Freelabster
                            "getToken?url=http://example.com/file.stl")
           .to_return(status: 200,
                      body: '{"token":"f00bar"}',
-                     headers: { "Content-Type": "application/json" })
-        expect(api.get_token(url: url)).to eq({ "token" => "f00bar" })
+                     headers: { "Content-Type" => "application/json" })
+
+        expected_response = { "token" => "f00bar" }
+        expect(api.get_token(url: url)).to eq(expected_response)
       end
     end
   end

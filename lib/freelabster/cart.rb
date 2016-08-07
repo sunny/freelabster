@@ -3,7 +3,7 @@ module Freelabster
   #
   # Example:
   #   cart = Freelabster::Cart.enw(stl_url: "http://example.com/file.stl")
-  #   cart.url # => "https://www.freelabster.com/dashboard/order/cart?external…"
+  #   cart.url # => "https://www.freelabster.com/dashboard/order/cart?extern..."
   class Cart
     def initialize(stl_url:, api: API.new)
       @stl_url = stl_url
