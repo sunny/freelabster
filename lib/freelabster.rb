@@ -1,5 +1,5 @@
-require "freelabster/version"
+require "http"
 
-module Freelabster
-  # Your code goes here...
-end
+require "freelabster/version"
+require "freelabster/api"
+require "freelabster/cart"
