@@ -2,8 +2,8 @@ require "spec_helper"
 
 module Freelabster
   describe Cart do
-    subject(:cart) { described_class.new(stl_url: stl_url, api: api) }
-    let(:stl_url) { "http://example.com/file.stl" }
+    subject(:cart) { described_class.new(file_urls: file_urls, api: api) }
+    let(:file_urls) { ["http://example.com/file.stl"] }
     let(:api) { instance_double API, get_token: { "token" => "f00b4r" } }
 
     describe "#url" do
@@ -11,6 +11,11 @@ module Freelabster
         expect(cart.url)
           .to eq("https://www.freelabster.com/dashboard/order/cart" \
                  "?token=f00b4r")
+      end
+
+      it "calls get_token with the correct params on the API " do
+        cart.url
+        expect(api).to have_received(:get_token).with(urls: file_urls)
       end
 
       it "calls get_token on the API only once" do

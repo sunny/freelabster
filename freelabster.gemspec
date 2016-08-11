@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["sunny@sunfox.org"]
 
   spec.summary       = "Send 3D models to freelabster.com"
-  spec.description   = "Create carts on freelabster.com and send STL files"
+  spec.description   = "Create carts on freelabster.com and send 3D files"
   spec.homepage      = "http://github.com/sunny/freelabster"
   spec.license       = "MIT"
 

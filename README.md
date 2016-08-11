@@ -1,6 +1,7 @@
 # Freelabster
 
-Gem to send 3D STL files to https://www.freelabster.com/
+Gem to send 3D files to https://www.freelabster.com/
+
 
 ## Installation
 
@@ -14,16 +15,18 @@ And then execute:
 
     $ bundle
 
+
 ## Usage
 
-Pass the URL to an stl (or a zip of STL files) and this will return the url
-to the cart where you can redirect a user.
+Pass URLs to STL files and this will return the url to a cart where you can
+redirect a user.
 
 ```ruby
-cart = Freelabster::Cart.new(stl_url: "http://url-of-stl-file")
+cart = Freelabster::Cart.new(file_urls: ["http://example.com/file.stl"])
 cart.url
 # => "https://www.freelabster.com/dashboard/order/cart?token=f0a23e2…"
 ```
+
 
 ## Development
 
