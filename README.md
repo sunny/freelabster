@@ -22,7 +22,7 @@ to the cart where you can redirect a user.
 ```ruby
 cart = Freelabster::Cart.new(stl_url: "http://url-of-stl-file")
 cart.url
-# => "https://www.freelabster.com/dashboard/order/cart?externalProject=f0a23e2…"
+# => "https://www.freelabster.com/dashboard/order/cart?token=f0a23e2…"
 ```
 
 ## Development

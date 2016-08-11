@@ -10,9 +10,10 @@ module Freelabster
       @api = api
     end
 
-    def url
-      "https://www.freelabster.com/dashboard/order/cart" \
-      "?externalProject=#{token}"
+    def url(params = {})
+      uri = URI("https://www.freelabster.com/dashboard/order/cart")
+      uri.query = URI.encode_www_form(params.merge(token: token))
+      uri.to_s
     end
 
     private
@@ -20,7 +21,7 @@ module Freelabster
     attr_reader :stl_url, :api
 
     def token
-      @token ||= api.get_token(url: stl_url).fetch(:token)
+      @token ||= api.get_token(url: stl_url).fetch("token")
     end
   end
 end
