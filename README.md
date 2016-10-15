@@ -8,6 +8,7 @@ Gem to send 3D files to https://www.freelabster.com/
 Add this line to your application's Gemfile:
 
 ```ruby
+# Send 3D files to freelabster.com's API
 gem "freelabster"
 ```
 
