@@ -3,3 +3,6 @@ AllCops:
 
 Style/StringLiterals:
   EnforcedStyle: double_quotes
+
+Gemspec/OrderedDependencies:
+  Enabled: false
